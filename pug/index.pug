@@ -1,0 +1,118 @@
+doctype html
+html(lang="en")
+  head
+    meta(charset="utf-8")
+    title useragent.codes
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
+    link(rel="stylesheet" href="dist/css/useragent.min.css")
+  body
+
+    .navbar.navbar-inverse.navbar-fixed-top
+      .container
+        .navbar-header.text-center
+          a.navbar-brand(href="/")
+            i.fa.fa-lg.fa-globe(aria-hidden="true")
+            | &nbsp;useragent.codes
+
+
+    .container
+      .row
+        .col-xs-12.col-md-8.col-md-offset-2
+          section
+            .page-header
+              h1.h2.
+                What is #[em useragent.codes] ?
+            p.
+              A small and easy but useful webservice to identify user-agents (browsers).
+              I created it because I needed to identify browser + OS on another project.
+              Browscap was not possible to use, because it gives you a 73MB JSON (minified).
+              Not a good choice for a JavaScript-only frontend project.
+
+          section
+            .page-header
+              h1.h2 Why do I need it?
+            p.
+              Have you (as a developer) ever tried to identify you browser & OS via #[code navigator.useragent] by yourself?
+              <br>
+              You have to parse this string and often it looks very different on various browsers and systems.
+            p.
+              Believe me, you don't want to do this by yourself. #[strong It sucks].
+
+          section
+            .page-header
+              h1.h2 How does it work?
+            p.
+              #[strong It's simple:]
+              <br>
+              I used #[a(href="https://github.com/ua-parser/uap-php" target="_blank") UA-Parser's PHP implementation] and put it on a server.
+              It returns a JSON string with all the available information.
+
+          section
+            .page-header
+              h1.h2 How do I use it?
+            p.
+              Just request #[a(href="https://useragent.codes/get") https://useragent.codes/get] and the response will look something like this:
+              <br>
+
+            pre.
+              {
+                "info":{
+                  "name":"useragent.codes",
+                  "version":"v0.1"
+                },
+                "browser":{
+                  "fullName":"Chrome 59.0.3071",
+                  "name":"Chrome",
+                  "version":"59.0.3071",
+                  "major":"59",
+                  "minor":"0",
+                  "patch":"3071"
+                },
+                "system":{
+                  "fullName":"Windows 10",
+                  "name":"Windows 10",
+                  "version":"",
+                  "major":null,
+                  "minor":null,
+                  "patch":null,
+                  "patchMinor":null
+                },
+                "device":{
+                  "brand":null,
+                  "model":null,
+                  "family":"Other"
+                }
+              }
+
+    footer
+      .container
+        .row
+          .col-xs-6.col-md-12.text-center
+            p
+              a.btn.btn-sm.btn-facebook(href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftomlutzenberger.github.io%2Fdevice-info%2F" target="_blank")
+                i.fa.fa-fw.fa-lg.fa-facebook(aria-hidden="true")
+                span.hidden-xs
+                  | &nbsp;Share
+              | &nbsp;
+              a.btn.btn-sm.btn-twitter(href="https://twitter.com/share?text=Device%20Info%20-%20Gives%20you%20all%20the%20information%20about%20a%20device%20you%20need%20to%20know&amp;url=https%3A%2F%2Ftomlutzenberger.github.io%2Fdevice-info%2F&amp;via=t0mlutzenberger&amp;hashtags=device%2Cinfo" target="_blank")
+                i.fa.fa-fw.fa-lg.fa-twitter(aria-hidden="true")
+                span.hidden-xs
+                  | &nbsp;Tweet
+              | &nbsp;
+              a.btn.btn-sm.btn-github(href="https://github.com/tomlutzenberger/device-info" title="Contribute on GitHub" target="_blank")
+                i.fa.fa-fw.fa-lg.fa-github(aria-hidden="true")
+                span.hidden-xs
+                  | &nbsp;Contribute
+
+          .col-xs-6.col-md-12.text-center
+            p
+              | Made with&nbsp;
+              span.color-red
+                i.fa.fa-heart(aria-hidden="true")
+                span.sr-only
+                  | ❤
+            p
+              | A Project by&nbsp;
+              a(href="https://tomlutzenberger.de" target="_blank")
+                | Tom Lutzenberger

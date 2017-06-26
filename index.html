@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><title>useragent.codes</title><meta name="viewport" content="width=device-width, initial-scale=1"><meta http-equiv="X-UA-Compatible" content="IE=edge"><link rel="stylesheet" href="dist/css/useragent.min.css"></head><body><div class="navbar navbar-inverse navbar-fixed-top"><div class="container"><div class="navbar-header text-center"><a class="navbar-brand" href="/"><i class="fa fa-lg fa-globe" aria-hidden="true"></i>&nbsp;useragent.codes</a></div></div></div><div class="container"><div class="row"><div class="col-xs-12 col-md-8 col-md-offset-2"><section><div class="page-header"><h1 class="h2">What is <em>useragent.codes</em> ?</h1></div><p>A small and easy but useful webservice to identify user-agents (browsers).
+I created it because I needed to identify browser + OS on another project.
+Browscap was not possible to use, because it gives you a 73MB JSON (minified).
+Not a good choice for a JavaScript-only frontend project.
+</p></section><section><div class="page-header"><h1 class="h2">Why do I need it?</h1></div><p>Have you (as a developer) ever tried to identify you browser & OS via <code>navigator.useragent</code> by yourself?
+<br>
+You have to parse this string and often it looks very different on various browsers and systems.</p><p>Believe me, you don't want to do this by yourself. <strong>It sucks</strong>.
+</p></section><section><div class="page-header"><h1 class="h2">How does it work?</h1></div><p><strong>It's simple:</strong>
+<br>
+I used <a href="https://github.com/ua-parser/uap-php" target="_blank">UA-Parser's PHP implementation</a> and put it on a server.
+It returns a JSON string with all the available information.
+</p></section><section><div class="page-header"><h1 class="h2">How do I use it?</h1></div><p>Just request <a href="https://useragent.codes/get">https://useragent.codes/get</a> and the response will look something like this:
+<br>
+</p><pre>{
+  "info":{
+    "name":"useragent.codes",
+    "version":"v0.1"
+  },
+  "browser":{
+    "fullName":"Chrome 59.0.3071",
+    "name":"Chrome",
+    "version":"59.0.3071",
+    "major":"59",
+    "minor":"0",
+    "patch":"3071"
+  },
+  "system":{
+    "fullName":"Windows 10",
+    "name":"Windows 10",
+    "version":"",
+    "major":null,
+    "minor":null,
+    "patch":null,
+    "patchMinor":null
+  },
+  "device":{
+    "brand":null,
+    "model":null,
+    "family":"Other"
+  }
+}
+</pre></section></div></div></div><footer><div class="container"><div class="row"><div class="col-xs-6 col-md-12 text-center"><p><a class="btn btn-sm btn-facebook" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ftomlutzenberger.github.io%2Fdevice-info%2F" target="_blank"><i class="fa fa-fw fa-lg fa-facebook" aria-hidden="true"></i><span class="hidden-xs">&nbsp;Share</span></a>&nbsp;<a class="btn btn-sm btn-twitter" href="https://twitter.com/share?text=Device%20Info%20-%20Gives%20you%20all%20the%20information%20about%20a%20device%20you%20need%20to%20know&amp;amp;url=https%3A%2F%2Ftomlutzenberger.github.io%2Fdevice-info%2F&amp;amp;via=t0mlutzenberger&amp;amp;hashtags=device%2Cinfo" target="_blank"><i class="fa fa-fw fa-lg fa-twitter" aria-hidden="true"></i><span class="hidden-xs">&nbsp;Tweet</span></a>&nbsp;<a class="btn btn-sm btn-github" href="https://github.com/tomlutzenberger/device-info" title="Contribute on GitHub" target="_blank"><i class="fa fa-fw fa-lg fa-github" aria-hidden="true"></i><span class="hidden-xs">&nbsp;Contribute</span></a></p></div><div class="col-xs-6 col-md-12 text-center"><p>Made with&nbsp;<span class="color-red"><i class="fa fa-heart" aria-hidden="true"></i><span class="sr-only">❤</span></span></p><p>A Project by&nbsp;<a href="https://tomlutzenberger.de" target="_blank">Tom Lutzenberger</a></p></div></div></div></footer></body></html>
