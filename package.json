@@ -1,0 +1,32 @@
+{
+  "name": "useragent",
+  "version": "0.1.0",
+  "main": "index.js",
+  "repository": "https://github.com/tomlutzenberger/useragent.git",
+  "author": "Tom Lutzenberger <lutzenbergerthomas@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0",
+    "pug-cli": "^1.0.0-alpha6"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.2.0",
+    "htmlhint": "^0.9.13",
+    "less": "^2.7.2",
+    "less-plugin-clean-css": "^1.5.1",
+    "stylelint": "^7.11.1",
+    "stylelint-config-standard": "^16.0.0"
+  },
+  "scripts": {
+    "lint:style": "stylelint --config .stylelintrc less/*.less;",
+    "lint:html": "htmlhint --config .htmlhintrc index.html;",
+    "lint": "yarn run lint:html && yarn run lint:style",
+    "less": "lessc --no-ie-compat --no-js --clean-css less/main.less dist/css/useragent.min.css",
+    "update-fonts": "copyfiles -f node_modules/font-awesome/fonts/* dist/fonts",
+    "pug": "pug --out ./ pug/index.pug",
+    "pug:watch": "pug --out ./ pug/index.pug --watch",
+    "compile": "yarn run update-fonts && yarn run less && yarn run pug",
+    "build": "yarn run compile && yarn run lint && yarn clean"
+  }
+}
