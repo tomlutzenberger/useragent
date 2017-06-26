@@ -2,7 +2,7 @@
 # useragent.codes
 
 [![Releases](https://img.shields.io/github/release/tomlutzenberger/useragent/all.svg)](https://github.com/tomlutzenberger/useragent/releases)
-[![NSP Status](https://nodesecurity.io/orgs/tomlutzenberger/projects//fca7e226-450f-4807-a43b-da1a77afec4d/badge)](https://nodesecurity.io/orgs/tomlutzenberger/projects//fca7e226-450f-4807-a43b-da1a77afec4d)
+[![NSP Status](https://nodesecurity.io/orgs/tomlutzenberger/projects/fca7e226-450f-4807-a43b-da1a77afec4d/badge)](https://nodesecurity.io/orgs/tomlutzenberger/projects/fca7e226-450f-4807-a43b-da1a77afec4d)
 [![David](https://img.shields.io/david/tomlutzenberger/useragent.svg)]()
 [![David Dev](https://img.shields.io/david/dev/tomlutzenberger/useragent.svg?label=devDep)]()
 
