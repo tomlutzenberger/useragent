@@ -33,4 +33,5 @@
 
     $uaObj->device = $result->device;
 
+    header('Content-Type: application/json');
     echo json_encode($uaObj);
